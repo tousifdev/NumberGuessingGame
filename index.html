@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <div class="max-w-[1320px] m-auto items-center justify-center">
+      <!-- page of player one name start -->
+
+      <div class="py-40" id="playerOneNameCard">
+        <!-- card start -->
+
+        <div
+          class="card card-border bg-base-100 w-120 py-10 m-auto inset-ring-2 inset-ring-blue-500 shadow shadow-indigo-500/50"
+        >
+          <div class="card-body m-auto w-80">
+            <h2
+              class="card-title m-auto text-2xl text-center font-bold font-display bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              Wanna Play Game?
+            </h2>
+            <!-- input start  -->
+            <input
+            type="text" id="playerOneName"
+            class="input input-primary placeholder-fuchsia-300 text-fuchsia-300 w-full text-center my-1.5 px-2"
+            required
+            placeholder="Enter Your Name"
+            />
+            <!-- input start  -->
+
+            <!-- button start  -->
+            <div class="card-actions justify-center">
+              <button id="playerOneStartBtn"
+                class="btn text-amber-50 m-auto rounded-2xl px-10 shadow- shadow-indigo-500/50 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+              >
+                Start Game
+              </button>
+            </div>
+            <!-- button end  -->
+
+            <!-- error start  -->
+            
+            <div
+            id="errorOne"
+              role="alert" 
+              class="alert alert-error my-5 flex items-center justify-center gap-2 hidden bg-red-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 shrink-0 stroke-white"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span class="text-white">Name is Missing!</span>
+            </div>
+
+            <!-- error end -->
+          </div>
+        </div>
+
+        <!-- card start -->
+      </div>
+      <!-- page of player one name end-->
+
+      <!-- page of player one number start-->
+
+      <div class="py-40 hidden" id="playerOneNumCard">
+        <div
+          class="card card-border bg-base-100 w-120 pt-8 pb-12 m-auto inset-ring-2 inset-ring-blue-500 shadow- shadow-indigo-500/50"
+        >
+          <div class="card-body m-auto w-80">
+            <h2 id="playerOneTitle"
+              class="card-title m-auto text-2xl text-center font-bold font-display bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              Player 1
+            </h2>
+            <input id="playerOneNumInput"
+              type="number"
+              class="input input-primary placeholder-fuchsia-300 text-fuchsia-300 validator w-full text-center my-1.5 px-4"
+              required
+              placeholder="Enter a number between 1 to 10"
+              min="1"
+              max="10"
+              title="Must be between be 1 to 10"
+            />
+            <!-- <p class="validator-hint">Must be between be 1 to 10</p> -->
+            <div id="letsPlayBtn" class="card-actions justify-end">
+              <button
+                class="btn text-amber-50 m-auto rounded-2xl px-10 shadow- shadow-indigo-500/50 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+              >
+                Let's Play
+              </button>
+            </div>
+            <!-- error start  -->
+            
+            <div
+            id="errorOneNum"
+              role="alert" 
+              class="alert alert-error my-5 flex items-center justify-center gap-2 hidden bg-red-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 shrink-0 stroke-white"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span class="text-white">Number is Missing!</span>
+            </div>
+
+            <!-- error end -->
+          </div>
+        </div>
+      </div>
+
+      <!-- page of player one number end-->
+
+      <!-- page of player two name start -->
+
+      <div class="py-40 hidden" id="playerTwoNameCard">
+        <!-- card start -->
+
+        <div
+          class="card card-border bg-base-100 w-120 py-10 m-auto inset-ring-2 inset-ring-blue-500 shadow- shadow-indigo-500/50"
+        >
+          <div class="card-body m-auto w-80">
+            <h2
+              class="card-title m-auto text-2xl text-center font-bold font-display bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              Player 2 - Name
+            </h2>
+            <!-- input start  -->
+            <input
+            type="text" id="playerTwoName"
+            class="input input-primary placeholder-fuchsia-300 text-fuchsia-300 w-full text-center my-1.5 px-2"
+            required
+            placeholder="Enter Your Name"
+            />
+            <!-- input start  -->
+
+            <!-- button start  -->
+            <div class="card-actions justify-center">
+              <button id="playerTwoStartBtn"
+                class="btn text-amber-50 m-auto rounded-2xl px-10 shadow- shadow-indigo-500/50 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+              >
+                Start Game
+              </button>
+            </div>
+            <!-- button end  -->
+
+            <!-- error start  -->
+            
+            <div
+            id="errorTwo"
+              role="alert" 
+              class="alert alert-error bg-red-500 my-5 flex items-center justify-center gap-2 hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 shrink-0 stroke-white"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span class="text-white">Name is Missing!</span>
+            </div>
+
+            <!-- error end -->
+          </div>
+        </div>
+
+        <!-- card start -->
+      </div>
+      <!-- page of player two name end-->
+
+      <!-- page of player two number start-->
+
+       <div class="py-40 hidden" id="playerTwoNumCard">
+        <div
+          class="card card-border bg-base-100 w-120 pt-8 pb-12 m-auto inset-ring-2 inset-ring-blue-500 shadow- shadow-indigo-500/50"
+        >
+          <div class="card-body m-auto w-80">
+            <h2 id="playerTwoTitle"
+              class="card-title m-auto text-2xl text-center font-bold font-display bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              Player 2
+            </h2>
+            <input id="playerTwoNumInput"
+              type="number"
+              class="input input-primary placeholder-fuchsia-300 text-fuchsia-300 validator w-full text-center my-1.5 px-4"
+              required
+              placeholder="Enter a number between 1 to 10"
+              min="1"
+              max="10"
+              title="Must be between be 1 to 10"
+            />
+            <!-- <p class="validator-hint">Must be between be 1 to 10</p> -->
+            <div id="guessBtn" class="card-actions justify-end">
+              <button
+                class="btn text-amber-50 m-auto rounded-2xl px-10 shadow- shadow-indigo-500/50 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+              >
+                Guess The Number
+              </button>
+            </div>
+            <!-- error start  -->
+            
+            <div
+            id="errorTwoNum"
+              role="alert" 
+              class="alert alert-error bg-red-500 my-5 flex items-center justify-center gap-2 hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 shrink-0 stroke-white"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span class="text-white">Number is Missing!</span>
+            </div>
+
+            <!-- error end -->
+          </div>
+        </div>
+      </div>
+
+      <!-- page of player two number end-->
+
+      <!-- page of Game Over start-->
+
+      <div id="gameOverCard" class="pt-40 pb-80 flex items-center text-center hidden">
+        <div
+          class="card card-border bg-base-100 w-150 py-15 m-auto inset-ring-2 inset-ring-blue-500 shadow- shadow-indigo-500/50"
+        >
+          <div  class="m-auto w-100">
+            <h3 id="gameResult"
+              class="text-2xl font-bold font-display bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              result
+            </h3>
+            <h1
+              class="text-5xl font-bold font-display bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              Game Over.
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- page of Game Over start-->
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
